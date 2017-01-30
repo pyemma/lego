@@ -129,7 +129,7 @@ class CART(object):
     def train(self, data, labels):
         self._root = self._split(data, labels, 1)
 
-    def test(self, data):
+    def predict(self, data):
         return np.array([self._iter(self._root, row) for row in data])
 
     def _split(self, data, labels, depth):
